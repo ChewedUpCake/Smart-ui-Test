@@ -1,0 +1,33 @@
+.header-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  h1:before {
+    content: 'Find your Favorite';
+    font-size: 0.4em;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: normal;
+    font-family: $font-main;
+    position: absolute;
+    top: 13%;
+    right: 40%;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+  a {
+    font-size: 1.2em;
+    padding: 25px 80px 47px 80px;
+  }
+  p {
+    margin-top: $gap * 2;
+  }
+  .add-recipe-link {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,55 @@
+.header-navbar
+{
+  @include md
+  {
+    display: flex;
+
+    justify-content: flex-end;
+  }
+
+  &__list {
+    margin: 0 (-$gap) 0 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include md-min
+    {
+      display: grid;
+
+      justify-content: end;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    }
+    @include md
+    {
+      position: absolute;
+      top: 100%;
+      right: $gap * 2;
+      display: none;
+
+      text-align: right;
+
+      background-color: rgba($color-gray-dark, .9);
+    }
+  }
+
+  &__link
+  {
+    font-family: $font-header;
+    font-size: 1.125rem;
+    display: block;
+    padding: $gap;
+  }
+  &__link:hover {
+    color: $color-accent;
+  }
+  &__item:nth-last-child(-n+1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  //&__item:hover {
+  //  color: $color-accent;
+  //}
+}

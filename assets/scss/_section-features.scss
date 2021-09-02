@@ -1,9 +1,14 @@
 .features {
   @extend %container;
   display: flex;
-  height: 50vh;
+  min-height: 50vh;
   align-items: center;
   margin: 100px auto;
+
+  @include md-sm {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
 }
 
 .feature-item {

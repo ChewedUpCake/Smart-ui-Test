@@ -4,6 +4,8 @@
 @import "mixins-media";
 @import "skins";
 
+@import "common";
+
 @import "header/header";
 @import "header/header-menu";
 @import "header/header-logo";
@@ -12,4 +14,6 @@
 @import "header/header-overlay";
 @import "header/_header-content";
 
-@import "common";
+@import "section-features";
+@import "section-intro-app";
+

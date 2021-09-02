@@ -1,3 +1,25 @@
+/*
+
+@include lg-min {
+
+}
+@include lg-md {
+
+}
+@include md-sm {
+
+}
+@include sm {
+
+}
+*/
+.features {
+  max-width: 1340px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 /* ul */
 /* xl */
 /* lg */
@@ -5,6 +27,93 @@
 /* sm */
 /* xs */
 /* xx */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Brygada 1918", serif;
+  font-size: 16px;
+  overflow-y: scroll;
+  letter-spacing: .1em;
+  color: #fff;
+}
+
+h1 {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0.3em;
+  letter-spacing: .08em;
+}
+
+h2 {
+  letter-spacing: 0.1em;
+  color: #000;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  line-height: 1.2em;
+}
+
+h3 {
+  letter-spacing: 0.05em;
+  color: #000;
+  font-size: 1.125rem;
+}
+
+p {
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn,
+.btn-accent {
+  display: block;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.btn:focus, .btn:hover,
+.btn-accent:focus,
+.btn-accent:hover {
+  background-color: #7B4162;
+}
+
+.btn {
+  border: 3px solid #fff;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: block;
+  height: 60px;
+  padding: 18px 20px;
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 1.125rem;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #7B4162;
+}
+
+.btn--light {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn--primary {
+  border-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .header {
   position: relative;
   display: grid;
@@ -14,7 +123,7 @@
   color: #fff;
   background-color: red;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 100%;
   background-size: cover;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -41,7 +150,7 @@
 }
 
 .header-logo img {
-  height: 65px;
+  height: 100%;
 }
 
 .header-navbar__list {
@@ -176,10 +285,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0.6;
-  background: -webkit-gradient(linear, left top, right top, color-stop(87%, rgba(173, 120, 103, 0.877188)), to(rgba(94, 10, 77, 0.888393)));
-  background: -o-linear-gradient(left, rgba(173, 120, 103, 0.877188) 87%, rgba(94, 10, 77, 0.888393) 100%);
-  background: linear-gradient(90deg, rgba(173, 120, 103, 0.877188) 87%, rgba(94, 10, 77, 0.888393) 100%);
 }
 
 .header-content {
@@ -220,6 +325,7 @@
 
 .header-content p {
   margin-top: 40px;
+  color: #fff;
 }
 
 .header-content .add-recipe-link {
@@ -227,96 +333,85 @@
   font-weight: bold;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 100px auto;
 }
 
-html {
-  font-family: "Brygada 1918", serif;
-  font-size: 16px;
-  overflow-y: scroll;
-  letter-spacing: .1em;
-  color: #fff;
+.feature-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-h1 {
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-  font-weight: 500;
-  margin-bottom: 0.3em;
-  letter-spacing: .08em;
-}
-
-h2 {
-  letter-spacing: 0.1em;
-  color: #2E093C;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-  line-height: 1.2em;
-}
-
-h3 {
-  letter-spacing: 0.05em;
-  color: #637588;
-  font-size: 1.125rem;
-}
-
-p {
-  color: #fff;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.btn,
-.btn-accent {
+.feature-item__description {
   display: block;
-  -webkit-transition: background-color .5s;
-  -o-transition: background-color .5s;
-  transition: background-color .5s;
   text-align: center;
-  letter-spacing: 0.1em;
 }
 
-.btn:focus, .btn:hover,
-.btn-accent:focus,
-.btn-accent:hover {
-  background-color: #7B4162;
+.feature-item__description h3 {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  position: relative;
 }
 
-.btn {
-  border: 3px solid #fff;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: block;
-  height: 60px;
-  padding: 18px 20px;
-  -webkit-transition: background-color 0.5s, border-color 0.5s;
-  -o-transition: background-color 0.5s, border-color 0.5s;
-  transition: background-color 0.5s, border-color 0.5s;
-  text-align: center;
-  letter-spacing: 0;
-  font-size: 1.125rem;
+.feature-item__description h3:after {
+  position: absolute;
+  bottom: -5px;
+  right: 38%;
+  width: 100px;
+  height: 1px;
+  content: "";
+  background-color: #F57365;
 }
 
-.btn:hover, .btn:focus {
-  background-color: #7B4162;
+.feature-item__description p {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
-.btn--light {
-  border-color: #fff;
-  background-color: rgba(255, 255, 255, 0.1);
+.intro-app {
+  background-color: #F7F7F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.btn--primary {
-  border-color: #2E093C;
-  background-color: rgba(46, 9, 60, 0.8);
+.intro-app__description p {
+  max-width: 550px;
 }
 
 @media (min-width: 576px) {
   .btn--primary {
     min-width: 350px;
+  }
+  .intro-app {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .intro-app__description h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+  }
+  .intro-app__description p {
+    font-size: 0.8rem;
+    margin: 10px auto;
+    text-align: center;
   }
 }
 
@@ -329,6 +424,17 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   }
+  .intro-app {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .intro-app__description h2 {
+    text-align: left;
+  }
 }
 
 @media (min-width: 992px) {
@@ -338,6 +444,41 @@ a {
   h2 {
     margin-bottom: 56px;
     font-size: 2.5rem;
+  }
+  .intro-app__description {
+    margin-top: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro-app__picture {
+    padding: 100px 50px 0 100px;
+  }
+}
+
+@media (max-width: 1199.8px) and (min-width: 992px) {
+  .intro-app__picture {
+    padding: 50px 50px 0 50px;
+  }
+}
+
+@media (max-width: 991.8px) and (min-width: 576px) {
+  .intro-app__picture {
+    padding: 50px 50px 0 50px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .intro-app__description__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .intro-app__description__links a {
+    display: block;
   }
 }
 
@@ -349,9 +490,21 @@ a {
     margin-bottom: 42px;
     font-size: 2rem;
   }
+  .intro-app__picture img {
+    max-height: 500px;
+  }
+  .intro-app__description {
+    margin-top: 100px;
+  }
+  .intro-app__description p {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 767.8px) {
+  h1 {
+    font-size: 1.875rem;
+  }
   .header-navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -368,15 +521,18 @@ a {
     text-align: right;
     background-color: rgba(68, 89, 110, 0.9);
   }
-  h1 {
-    font-size: 1.875rem;
-  }
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
   h2 {
     margin-bottom: 36px;
     font-size: 1.5rem;
+  }
+  .intro-app__picture {
+    margin: 0 auto;
+  }
+  .intro-app__picture img {
+    max-height: 400px;
   }
 }
 

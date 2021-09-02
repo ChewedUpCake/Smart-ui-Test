@@ -1,0 +1,88 @@
+.intro-app {
+  background-color: $color-gray-light;
+  display: flex;
+
+  @include md-min {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @include sm-min {
+    flex-flow: column;
+  }
+  &__picture {
+
+    @include xl-min {
+      padding: 100px 50px 0 100px;
+    }
+    @include xl-lg {
+     padding:  50px 50px 0 50px;
+    }
+    @include lg-sm {
+      padding: 50px 50px 0 50px;
+      height: fit-content;
+    }
+    @include md-sm {
+      margin: 0 auto;
+    }
+    @include sm {
+
+    }
+    img {
+      @include lg-md {
+        max-height: 500px;
+      }
+      @include md-sm {
+        max-height: 400px;
+      }
+    }
+  }
+  &__description {
+
+    @include lg-min {
+      margin-top: 200px;
+      //margin-right: 200px;
+    }
+    @include lg-md {
+      margin-top: 100px;
+    }
+    @include md-sm {
+
+    }
+    &__links {
+      @include lg-sm {
+        //margin-left: 180px;
+        display: flex;
+        justify-content: center;
+        a {
+          display: block;
+        }
+      }
+    }
+
+    h2 {
+
+      @include md-min {
+        text-align: left;
+      }
+      @include sm-min {
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.1em;
+        margin-bottom: 40px;
+      }
+
+    }
+    p {
+      max-width: 550px;
+
+      @include lg-md {
+        font-size: 0.8rem;
+      }
+      @include sm-min {
+        font-size: 0.8rem;
+        margin: 10px auto;
+        text-align: center;
+      }
+    }
+  }
+}

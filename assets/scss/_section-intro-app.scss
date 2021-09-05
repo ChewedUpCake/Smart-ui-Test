@@ -1,6 +1,11 @@
 .intro-app {
   background-color: $color-gray-light;
-  display: flex;
+
+  &__container {
+    @extend %container;
+    display: flex;
+  }
+
 
   @include md-min {
     flex-direction: row;

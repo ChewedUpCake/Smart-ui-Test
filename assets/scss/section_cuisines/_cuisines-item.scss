@@ -1,0 +1,28 @@
+.cuisines-item {
+  //height: 200px;
+  //width: 200px;
+  position: relative;
+  overflow: hidden;
+
+  .cuisines__image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .cuisines__title {
+    position: absolute;
+  }
+}
+
+//@for $i from 1 through 10
+//{
+//  .cuisines-item:nth-of-type(#{$i})
+//  {
+//    grid-area: a#{$i};
+//  }
+//}

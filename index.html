@@ -34,7 +34,7 @@
             <a class="header-navbar__link" href="">SIGN UP</a>
           </li>
           <li class="header-navbar__item">
-            <div id="burger-menu" class="burger-flex" onclick="burger_click()">
+            <div id="burger-menu" class="burger-flex">
               <div class="burger-hyphens"></div>
               <div class="burger-hyphens"></div>
               <div class="burger-hyphens"></div>
@@ -100,30 +100,102 @@
     </div>
   </section>
   <section class="intro-app">
-    <div class="intro-app__picture">
-      <img src="/assets/img/iphonePic.png" alt="presenting app">
-    </div>
-    <div class="intro-app__description">
-      <h2>INTRODUCING THE FUDI APP</h2>
-      <p>Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet
-        felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest
-        ibulum tristique. Suspendisse tristique lacus ac mattis porta.</p>
-      <p>Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In
-        libero dui, eleifend eu nisi id, egestas fringilla odio. In varius quam a mas
-        sa hendrerit ullamcorper a eu justo. Suspendisse porta mattis convallis.
-        Aenean tempus ligula ac odio rhoncus, quis aliquam dolor accumsan.</p>
-      <p>Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam
-        malesuada. Duis vehicula a nibh id hendrerit. Donec sit amet ultrices
-        ante, a mattis massa.</p>
+    <div class="intro-app__container">
+      <div class="intro-app__picture">
+        <img src="/assets/img/iphonePic.png" alt="presenting app">
+      </div>
+      <div class="intro-app__description">
+        <h2>INTRODUCING THE FUDI APP</h2>
+        <p>Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet
+          felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest
+          ibulum tristique. Suspendisse tristique lacus ac mattis porta.</p>
+        <p>Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In
+          libero dui, eleifend eu nisi id, egestas fringilla odio. In varius quam a mas
+          sa hendrerit ullamcorper a eu justo. Suspendisse porta mattis convallis.
+          Aenean tempus ligula ac odio rhoncus, quis aliquam dolor accumsan.</p>
+        <p>Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam
+          malesuada. Duis vehicula a nibh id hendrerit. Donec sit amet ultrices
+          ante, a mattis massa.</p>
 
-      <div class="intro-app__description__links">
-        <a href="#"><img src="/assets/img/appstore-icon.png" alt="appstore link"></a>
-        <a href="#"><img src="/assets/img/playstore-icon.png" alt="playstore link"></a>
+        <div class="intro-app__description__links">
+          <a href="#"><img src="/assets/img/appstore-icon.png" alt="appstore link"></a>
+          <a href="#"><img src="/assets/img/playstore-icon.png" alt="playstore link"></a>
+        </div>
       </div>
     </div>
+  </section>
+  <section class="carousel">
+    <div class="carousel-container">
+      <div class ="carousel-item">
+        <div class="rounded-circle" style="background-color: #B79C81; background-image: url(https://i.pinimg.com/originals/3a/b3/8e/3ab38e395dd4950db6d8e0c39ad21e31.jpg);">
+        </div>
+        <div class="carousel-item__txt">
+          <p class="comment">“I am so happy because I found this recipe, and it just made my life easier.
+            Thanks  so much for sharing!”</p>
+          <p class="bio">- Michael Dawson, San Francisco, CA -</p>
+        </div>
+      </div>
+      <div class ="carousel-item">
+        <div class="rounded-circle" style="background-color: #B79C81; background-image: url(https://media.npr.org/assets/img/2021/04/27/prancer_wide-db59609b5bd96c9e56e4dfe32d198461197880c2.jpg?s=1400);">
+        </div>
+        <div class="carousel-item__txt">
+          <p class="comment"></p>
+          <p class="bio"></p>
+        </div>
+      </div>
+      <div class ="carousel-item">
+        <div class="rounded-circle" style="background-color: #B79C81; background-image: url(https://i.pinimg.com/originals/cb/f9/2e/cbf92e8ae1c953f7314d011c337a5060.jpg);">
+        </div>
+        <div class="carousel-item__txt">
+          <p class="comment"></p>
+          <p class="bio"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cuisines">
+    <h3>BROWSE BY CUISINES</h3>
+    <div class="cuisines__nav">
+      <a id="sort-min" href="#">Sort Min</a>
+      <a id="sort-max" href="#">Sort Max</a>
+    </div>
+    <div class="cuisines__container"></div>
 
   </section>
+  <section class="statistic">
+    <div class="statistics-container">
+      <div class="statistics-container__item">
+        <p class="number">2567</p>
+        <p>Recipes Available</p>
+      </div>
+      <div class="statistics-container__item">
+        <p class="number">431729</p>
+        <p>Active Users</p>
+      </div>
+      <div class="statistics-container__item">
+        <p class="number">892173</p>
+        <p>Positive Reviews</p>
+      </div>
+      <div class="statistics-container__item">
+        <p class="number">56581</p>
+        <p>Photos & Videos</p>
+      </div>
+      <div class="statistics-container__item">
+        <p class="number">3182</p>
+        <p>Spices and Herbs</p>
+      </div>
+    </div>
+  </section>
 </main>
+<footer class="footer">
+<div class="footer-container">
+  <div class="copyright"><p>©2014 Fudi. All Rights Reserved.</p></div>
+  <div class="design">
+    <p>DESIGN BY:</p>
+    <a href="#">WWW.BEKADES.COM</a>
+  </div>
+</div>
+</footer>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>

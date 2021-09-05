@@ -1,0 +1,16 @@
+.cuisines {
+  //@extend %container;
+
+
+  &__nav {
+    a {
+      color: red;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-auto-rows: 225px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

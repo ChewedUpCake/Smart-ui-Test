@@ -13,20 +13,138 @@ menu_header.addEventListener('click', () => {
     }
 });
 
+//SIGN-UP FORM
+
+const renderSignUp = () => {
+    const newModal = document.createElement('div');
+    newModal.classList.add('form')
+    document.body.append(newModal)
+
+    newModal.innerHTML = `
+             <div class="form-container">
+                <span class="form-container__close"><</span>
+                <img class="form-container__logo" src="/assets/img/logo.png" alt="logo">
+                <h3 class="form-container__header">SIGN-UP</h3>
+                <form class="form-container__fields" id="add-user-form">
+                    <input required id="add-user__username" type="text" placeholder="Username">
+                    <input required id="add-user__email" type="text" placeholder="Email">
+                    <input required id="add-user__password" type="text" placeholder="password">
+                    <div class="btn__form">
+                      <button type="submit" class="form-container__btn">SIGN UP</button>
+                    </div>
+                    <div class="form-container__hint">
+                        <p>IF YOU ALREADY HAVE AN ACCOUNT<br><span class="form-container__link" id="logInform">LOG IN</span></p>
+                    </div>
+              </form>`
+
+    // LOGIN BUTTON LISTENER IN FORM
+    const logIN = document.getElementById('logInform');
+
+    logIN.addEventListener('click', () => {
+        const openedModal = document.querySelector(`.form`)
+
+        if (openedModal) {
+            openedModal.remove();
+        }
+        renderLogIn();
+    });
+    // CLOSE BUTTON LISTENER IN FORM
+    const closeButton = newModal.querySelector('.form-container__close');
+    closeButton.addEventListener('click', () => {
+        newModal.remove()
+    })
+}
+
+//SIGN-UP BUTTON LISTENER
+const signUpBtn = document.getElementById('sign-up');
+
+signUpBtn.addEventListener('click', () => {
+    const openedModal = document.querySelector(`.form`)
+
+    if (openedModal) {
+        openedModal.remove();
+    }
+    renderSignUp();
+});
+
+
+//LOG-IN FORM
+
+const renderLogIn = () => {
+    const newModal = document.createElement('div');
+    newModal.classList.add('form')
+    document.body.append(newModal)
+
+    newModal.innerHTML = `
+             <div class="form-container">
+                <span class="form-container__close"><</span>
+                <img class="form-container__logo" src="/assets/img/logo.png" alt="logo">
+                <h3 class="form-container__header">SIGN-UP</h3>
+                <form class="form-container__fields" id="login-user-form">
+                    <input required id="login-user__username" type="text" placeholder="Username or email">
+                    <input required id="add-user__password" type="text" placeholder="password">
+                    <div class="btn__form">
+                      <button type="submit" class="form-container__btn">SIGN UP</button>
+                    </div>
+                    <div class="form-container__hint">
+                        <p>DON\`T HAVE AN ACCOUNT?<br><span class="form-container__link" id="signUpform">SIGN UP</span></p>
+                    </div>
+              </form>`
+
+    //SIGN-UP BUTTON LISTENER IN FORM
+    const signUP = document.getElementById('signUpform');
+
+    signUP.addEventListener('click', () => {
+        const openedModal = document.querySelector(`.form`)
+
+        if (openedModal) {
+            openedModal.remove();
+        }
+        renderSignUp();
+    })
+    //CLOSE BUTTON LISTENER IN FORM
+    const closeButton = newModal.querySelector('.form-container__close');
+    closeButton.addEventListener('click', () => {
+        newModal.remove()
+    })
+};
+
+//LOGIN BUTTON LISTENER IN FORM
+const logInBtn = document.getElementById('log-in');
+
+logInBtn.addEventListener('click', () => {
+    const openedModal = document.querySelector(`.form`)
+
+    if (openedModal) {
+        openedModal.remove();
+    }
+    renderLogIn();
+});
+
+// GET REWARDED LINK LISTENER
+
+const getRewarded = document.querySelector('.add-recipe-link');
+
+getRewarded.addEventListener('click', () => {
+    const openedModal = document.querySelector(`.form`)
+
+    if (openedModal) {
+        openedModal.remove();
+    }
+    renderSignUp();
+});
 
 
 //COUNTER----------------------------------------
 let statistics = document.querySelector('.statistic');
+let statisticsTop = statistics.getBoundingClientRect().top;
 
-statistics.addEventListener('scroll', () => {
-
-})
-
+//ADD COMMAS FUNCTION
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-
+//FUNCTION ANIMATE COUNTING
 const calcCount = (el) => {
     const count = +el.innerHTML;
     el.innerHTML = 0;
@@ -44,14 +162,25 @@ const calcCount = (el) => {
         }
 
         el.innerHTML = currentValue + increment
-    }, 0.1)
+    }, 10)
 }
 
 
 const elements = document.querySelectorAll('.number');
+/* I`ve tried to hang the listener but it don`t work properly, if you want to see it anyway,
+please uncomment the script under and comment the last call of the function calcCount
 
-
+window.addEventListener('scroll', function onScroll() {
+    if(window.pageYOffset > statisticsTop - window.innerHeight / 2) {
+        this.removeEventListener('scroll', onScroll);
+        elements.forEach(i => calcCount(i))
+    }
+});
+*/
+    // Comment me
 elements.forEach(i => calcCount(i))
+
+
 
 // CAROUSEL---------------------------------------
 
@@ -139,6 +268,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //SORTING CUISINES------------------------------------
 
+//ARRAY OF VARIABLES AS DATABASE
 const recipesArray = [
     {
         "recipes": "american",
@@ -182,18 +312,15 @@ const recipesArray = [
     },
 ];
 
-console.log(recipesArray)
-
+//FUNCTION SORT FROM MIN TO MAX AMOUNT OF RECIPES
 const sortMin = [...recipesArray].sort(function (a, b) {
     return a.recipesAmount - b.recipesAmount
 })
-console.log(sortMin,recipesArray)
 
-
+//FUNCTION SORT FROM MIN TO MAX AMOUNT OF RECIPES
 const sortMax = [...recipesArray].sort(function (a, b) {
     return b.recipesAmount - a.recipesAmount
 })
-console.log(sortMax, recipesArray)
 
 
 const navLinks = [
@@ -207,6 +334,7 @@ const navLinks = [
     },
 ];
 
+//LISTENERS FOR NAV BUTTONS
 navLinks.forEach(item => {
     console.log(item)
     item.link.addEventListener('click', event => {
@@ -218,6 +346,7 @@ navLinks.forEach(item => {
     })
 })
 
+//FUNCTION RENDER DYNAMIC GRID IN HTML
 const table = document.querySelector('.cuisines__container');
 
 const renderTable = recipes => {

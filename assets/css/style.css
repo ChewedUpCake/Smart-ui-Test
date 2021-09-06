@@ -114,6 +114,153 @@ a {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.form {
+  display: block;
+  position: fixed;
+  top: 18%;
+  left: 30%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#351a49), to(#a7876f));
+  background: -o-linear-gradient(top, #351a49 0%, #a7876f 100%);
+  background: linear-gradient(to bottom, #351a49 0%, #a7876f 100%);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.form .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.form .form-container__close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 100%;
+  background-color: #694A5B;
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.form .form-container__logo {
+  height: 90px;
+  width: 115px;
+  margin: 0 auto;
+}
+
+.form .form-container__header {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  color: #fff;
+  margin: 20px auto;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+}
+
+.form .form-container__fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.form .form-container__fields input {
+  width: 465px;
+  height: 50px;
+  border: 2px solid #5E4059;
+  background: rgba(255, 255, 255, 0.11);
+  margin: 10px 75px;
+}
+
+.form .form-container__fields input::-webkit-input-placeholder {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.form .form-container__fields input::-moz-placeholder {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.form .form-container__fields input:-ms-input-placeholder {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.form .form-container__fields input::-ms-input-placeholder {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.form .form-container__fields input::placeholder {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.form .form-container .btn__form {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form .form-container .btn__form button {
+  width: 465px;
+  height: 50px;
+  background-color: #751045;
+  border: 2px solid #5E4059;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.form .form-container__hint {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.form .form-container__hint p {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.8em;
+  letter-spacing: 0.01em;
+}
+
+.form .form-container__link {
+  text-decoration: underline;
+}
+
 .header {
   position: relative;
   display: grid;
@@ -473,7 +620,6 @@ a {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
-  opacity: 0.5;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
@@ -485,7 +631,7 @@ a {
 }
 
 .carousel .dot:hover {
-  background-color: aqua;
+  background-color: #751045;
 }
 
 .cuisines__nav a {

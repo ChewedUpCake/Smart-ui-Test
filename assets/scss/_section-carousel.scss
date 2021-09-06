@@ -64,7 +64,6 @@
     background-color: white;
     border-radius: 50%;
     display: inline-block;
-    opacity: 0.5;
     flex: 0 1 auto;
     background-clip: padding-box;
     opacity: .5;
@@ -72,7 +71,7 @@
   }
 
   .dot:hover{
-    background-color: aqua;
+    background-color: $color-form-btn;
   }
 
 }

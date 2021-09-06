@@ -1,0 +1,94 @@
+.form {
+  display: block;
+  position: fixed;
+  top: 18%;
+  left: 30%;
+  background: linear-gradient(to bottom, #351a49 0%,#a7876f 100%);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  z-index: 2;
+
+  .form-container {
+    display: flex;
+    flex-flow: column;
+
+    &__close {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: 1px solid transparent;
+      border-radius: 100%;
+      background-color: #694A5B;
+      text-align: center;
+      padding-top: 15px;
+      margin-top: 2%;
+      margin-left: 2%;
+    }
+    &__logo {
+      height: 90px;
+      width: 115px;
+      margin: 0 auto;
+    }
+    &__header {
+      font-family: $font-header;
+      color: $color-light;
+      margin: 20px auto;
+      font-weight: 400;
+      font-size: 1.5rem;
+      letter-spacing: 0;
+    }
+    &__fields {
+      display: flex;
+      flex-flow: column;
+
+      input {
+        width: 465px;
+        height: 50px;
+        border: 2px solid $color-form-fields-border;
+        background: rgba(255, 255, 255, .11);
+        margin: 10px 75px;
+
+        &::placeholder {
+          font-family: $font-header;
+          font-weight: 600;
+          font-size: 1.2em;
+          color: $color-light;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .btn__form {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+
+      button {
+        width: 465px;
+        height: 50px;
+        background-color: $color-form-btn;
+        border: 2px solid $color-form-fields-border;
+        border-radius: 5px;
+        color: $color-light;
+        font-weight: 400;
+        font-size: 1em;
+      }
+    }
+
+    &__hint {
+      text-align: center;
+      margin: 20px 0 40px 0;
+
+      p {
+        font-family: $font-header;
+        color: $color-light;
+        font-weight: 500;
+        font-size: 0.8em;
+        letter-spacing: 0.01em;
+      }
+    }
+    &__link {
+      text-decoration: underline;
+    }
+  }
+}

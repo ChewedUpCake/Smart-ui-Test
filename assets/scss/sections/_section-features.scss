@@ -21,7 +21,6 @@
   flex-flow: column;
   align-items: center;
   margin: 7px;
-  @include xl-min {}
 
   &__description {
     display: block;

@@ -93,7 +93,7 @@
   p {
     margin-top: $gap * 2;
     color: $color-light;
-
+    cursor: pointer;
     @include lg-md {
       font-size: 0.8em;
     }

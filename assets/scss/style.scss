@@ -6,19 +6,19 @@
 
 @import "common";
 
-@import "section-form";
-@import "header/header";
-@import "header/header-menu";
-@import "header/header-logo";
-@import "header/header-navbar";
-@import "header/burger-menu";
-@import "header/header-overlay";
-@import "header/_header-content";
+@import "sections/section-form";
+@import "sections/header/header";
+@import "sections/header/header-menu";
+@import "sections/header/header-logo";
+@import "sections/header/header-navbar";
+@import "sections/header/burger-menu";
+@import "sections/header/header-overlay";
+@import "sections/header/_header-content";
 
-@import "section-features";
-@import "section-intro-app";
-@import "section-carousel";
-@import "section_cuisines/cuisines";
-@import "section_cuisines/cuisines-item";
-@import "section-statistics";
-@import "footer";
+@import "sections/section-features";
+@import "sections/section-intro-app";
+@import "sections/section-carousel";
+@import "sections/section_cuisines/cuisines";
+@import "sections/section_cuisines/cuisines-item";
+@import "sections/section-statistics";
+@import "sections/footer";

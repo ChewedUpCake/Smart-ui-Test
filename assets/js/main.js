@@ -349,7 +349,6 @@ const navLinks = [
 
 //LISTENERS FOR NAV BUTTONS
 navLinks.forEach(item => {
-    console.log(item)
     item.link.addEventListener('click', event => {
         event.preventDefault();
         renderTable(item.sort);

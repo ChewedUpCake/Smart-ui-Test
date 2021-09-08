@@ -20,6 +20,10 @@
   @include md-sm {
     left: 9%;
   }
+  @include  sm-xs {
+    top: 5%;
+    left: 0;
+  }
 
   .form-container {
     display: flex;
@@ -36,6 +40,11 @@
       padding-top: 15px;
       margin-top: 2%;
       margin-left: 2%;
+
+      @include sm-xs {
+        width: 50px;
+        height: 50px;
+      }
     }
     &__logo {
       height: 90px;
@@ -61,12 +70,22 @@
         background: rgba(255, 255, 255, .11);
         margin: 10px 75px;
 
+        @include sm-xs {
+          width: 230px;
+          height: 40px;
+        }
+
         &::placeholder {
           font-family: $font-header;
           font-weight: 600;
           font-size: 1.2em;
           color: $color-light;
           padding-left: 10px;
+
+          @include sm-xs {
+            font-weight: 600;
+            font-size: 1.2em;
+          }
         }
       }
     }
@@ -85,6 +104,11 @@
         color: $color-light;
         font-weight: 400;
         font-size: 1em;
+
+        @include sm-xs {
+          width: 230px;
+          height: 40px;
+        }
       }
     }
 

@@ -134,6 +134,19 @@ getRewarded.addEventListener('click', () => {
     renderSignUp();
 });
 
+// GET STARTED LINK
+
+const getStarted = document.getElementById('get-started');
+
+getStarted.addEventListener('click', () => {
+    const openedModal = document.querySelector(`.form`)
+
+    if (openedModal) {
+        openedModal.remove();
+    }
+    renderLogIn();
+});
+
 
 //COUNTER----------------------------------------
 let statistics = document.querySelector('.statistic');
@@ -262,7 +275,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, timeOutMS);
     }
 
-    // slidesTimer();
+    slidesTimer();
 });
 
 

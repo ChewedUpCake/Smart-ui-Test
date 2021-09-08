@@ -4,23 +4,26 @@
   &__container {
     @extend %container;
     display: flex;
+
+    @include md-min {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    @include sm-min {
+      flex-flow: column-reverse;
+      justify-content: center;
+      padding: 35px;
+    }
   }
 
 
-  @include md-min {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  @include sm-min {
-    flex-flow: column;
-  }
   &__picture {
 
     @include xl-min {
       padding: 100px 50px 0 100px;
     }
     @include xl-lg {
-     padding:  50px 50px 0 50px;
+     padding:  50px 50px 0 60px;
     }
     @include lg-sm {
       padding: 50px 50px 0 50px;
@@ -33,6 +36,9 @@
 
     }
     img {
+      @include xl-lg {
+        max-height: 500px;
+      }
       @include lg-md {
         max-height: 500px;
       }
@@ -42,48 +48,75 @@
     }
   }
   &__description {
-
-    @include lg-min {
+    @include xl-min {
       margin-top: 200px;
-      margin-right: 200px;
+      margin-right: 100px;
+    }
+    @include xl-lg {
+      margin-top: 100px;
+      margin-right: 50px;
     }
     @include lg-md {
-      margin-top: 100px;
+      margin-top: 50px;
     }
     @include md-sm {
-
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
     }
+
+
     &__links {
-      @include lg-sm {
-        //margin-left: 180px;
-        display: flex;
-        justify-content: center;
-        a {
-          display: block;
-        }
+      @include md-sm {
+        margin: 0 auto;
       }
     }
 
     h2 {
+      font-weight: 600;
+      position: relative;
+      &:after {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100px;
+        height: 1px;
+        content: "";
+        background-color: $color-underline;
+
+        @include md-min {
+          left: 0;
+        }
+        @include md-sm {
+          left: 41%;
+        }
+
+      }
 
       @include md-min {
         text-align: left;
       }
       @include sm-min {
         text-align: center;
-        font-weight: 300;
         font-size: 1.1em;
         margin-bottom: 40px;
       }
 
     }
     p {
+      font-family: $font-header;
       max-width: 550px;
+      text-align: left;
+      font-weight: 400;
 
+      @include lg-min {
+        font-size: 0.8rem;
+        margin: 20px auto;
+      }
       @include lg-md {
         font-size: 0.8rem;
       }
-      @include sm-min {
+      @include md-sm {
         font-size: 0.8rem;
         margin: 10px auto;
         text-align: center;

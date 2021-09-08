@@ -5,6 +5,10 @@
   align-items: center;
   margin: 100px auto;
 
+  @include lg-md {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
   @include md-sm {
     flex-direction: column;
     padding-bottom: 20px;
@@ -26,15 +30,33 @@
       &:after {
         position: absolute;
         bottom: -5px;
-        right: 38%;
+        //right: 38%;
         width: 100px;
         height: 1px;
         content: "";
         background-color: $color-underline;
+
+        @include lg-min {
+          right: 38%;
+        }
+        @include lg-md {
+          right: 44.5%;
+        }
+        @include md-sm {
+          right: 42.5%;
+        }
       }
     }
     p {
       font-family: $font-header;
+
+      @include xl-min {
+        font-size: 1rem;
+      }
+      @include sm-min {
+        font-size: 0.9rem;
+        margin: 20px auto;
+      }
     }
   }
 }

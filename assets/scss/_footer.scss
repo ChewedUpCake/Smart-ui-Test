@@ -15,6 +15,10 @@
       align-items: center;
       p {
         color: $color-footer-txt;
+
+        @include md-sm {
+          font-size: 0.8em;
+        }
       }
     }
 
@@ -24,10 +28,16 @@
 
       p {
         color: $color-footer-txt;
+        @include md-sm {
+          font-size: 0.8em;
+        }
       }
 
       a {
         color: $color-primary;
+        @include md-sm {
+          font-size: 0.8em;
+        }
       }
     }
   }

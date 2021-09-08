@@ -30,11 +30,11 @@ h1
   }
   @include lg-md
   {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   @include md
   {
-    font-size: 1.875rem;
+    font-size: 3.875rem;
   }
 }
 
@@ -112,7 +112,6 @@ a
   background-color: rgba($color-light, .1);
   display: block;
 
-  height: 60px;
   padding: 18px $gap;
 
   transition: background-color 0.5s, border-color 0.5s;
@@ -124,6 +123,16 @@ a
   &:hover,
   &:focus {
     background-color: $color-accent;
+  }
+
+  @include lg-min {
+    height: 60px;
+  }
+  @include lg-md {
+    height: 30px;
+  }
+  @include sm-min {
+    height: 30px;
   }
 }
 

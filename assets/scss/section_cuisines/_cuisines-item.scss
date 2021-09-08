@@ -3,6 +3,7 @@
   //width: 200px;
   position: relative;
   overflow: hidden;
+  padding-top: 50px;
 
   .cuisines__image {
     background-repeat: no-repeat;
@@ -16,13 +17,43 @@
   }
   .cuisines__title {
     position: absolute;
+    top: 34%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+
+    h2 {
+      margin: 0 auto;
+      text-transform: uppercase;
+
+      @include xl-min {
+        font-size: 2.5rem;
+      }
+      @include xl-lg {
+        font-size: 1.6rem;
+      }
+      @include lg-md {
+        font-size: 2.6rem;
+      }
+      @include md-sm {
+        font-size: 2.6rem;
+      }
+    }
+    p {
+      color: white;
+      font-style: italic;
+      margin: 0 auto;
+    }
   }
 }
 
-//@for $i from 1 through 10
-//{
-//  .cuisines-item:nth-of-type(#{$i})
-//  {
-//    grid-area: a#{$i};
-//  }
-//}
+@for $i from 1 through 10
+{
+  .cuisines-item:nth-of-type(#{$i})
+  {
+    grid-area: a#{$i};
+  }
+}

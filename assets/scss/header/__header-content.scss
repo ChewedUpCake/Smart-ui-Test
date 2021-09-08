@@ -3,6 +3,49 @@
   display: flex;
   justify-content: center;
 
+  @include xl-min {
+  }
+  @include xl-lg {
+  }
+  @include lg-sm {
+
+  }
+  @include md-sm {
+  }
+  @include sm {
+
+  }
+  &__logo {
+    @include md-min {
+      display: none;
+    }
+    @include sm-min {
+      margin: 0 auto 131px auto;
+
+      img {
+        height: 183%;
+      }
+    }
+  }
+  &__title {
+    @include md-sm {
+      margin: 20px auto;
+    }
+  }
+  &__container {
+    @include xl-md {
+        display: flex;
+        flex-flow: column;
+        justify-items: center;
+        text-align: center;
+    }
+    @include md-sm {
+      display: flex;
+      flex-flow: column;
+      justify-items: center;
+    }
+  }
+
   h1:before {
     content: 'Find your Favorite';
     font-size: 0.4em;
@@ -11,8 +54,25 @@
     letter-spacing: normal;
     font-family: $font-main;
     position: absolute;
-    top: 13%;
-    right: 40%;
+
+
+    @include xl-min {
+      top: 13%;
+      right: 40%;
+    }
+    @include xl-lg {
+      top: 13%;
+      right: 33%;
+    }
+    @include lg-md {
+      top: 8%;
+      right: 36%;
+    }
+    @include sm-min {
+      bottom: 43%;
+      right: 37%;
+    }
+
   }
 
   &__buttons {
@@ -20,12 +80,27 @@
     justify-content: center;
   }
   a {
-    font-size: 1.2em;
-    padding: 25px 80px 47px 80px;
+
+    @include lg-min {
+      font-size: 1.2em;
+      padding: 25px 80px 47px 80px;
+    }
+    @include lg-md {
+      font-size: 1.1em;
+      padding: 14px 40px 35px 40px;
+    }
+    @include sm-min {
+      font-size: 0.8em;
+      padding: 10px 40px 25px 40px;
+    }
   }
   p {
     margin-top: $gap * 2;
     color: $color-light;
+
+    @include lg-md {
+      font-size: 0.8em;
+    }
   }
   .add-recipe-link {
     text-decoration: underline;

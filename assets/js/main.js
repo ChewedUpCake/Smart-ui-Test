@@ -23,7 +23,7 @@ const renderSignUp = () => {
     newModal.innerHTML = `
              <div class="form-container">
                 <span class="form-container__close"><</span>
-                <img class="form-container__logo" src="/assets/img/logo.png" alt="logo">
+                <img class="form-container__logo" src="assets/img/logo.png" alt="logo">
                 <h3 class="form-container__header">SIGN-UP</h3>
                 <form class="form-container__fields" id="add-user-form">
                     <input required id="add-user__username" type="text" placeholder="Username">
@@ -78,7 +78,7 @@ const renderLogIn = () => {
     newModal.innerHTML = `
              <div class="form-container">
                 <span class="form-container__close"><</span>
-                <img class="form-container__logo" src="/assets/img/logo.png" alt="logo">
+                <img class="form-container__logo" src="assets/img/logo.png" alt="logo">
                 <h3 class="form-container__header">SIGN-UP</h3>
                 <form class="form-container__fields" id="login-user-form">
                     <input required id="login-user__username" type="text" placeholder="Username or email">
@@ -354,7 +354,7 @@ const renderTable = recipes => {
     table.innerHTML = recipes.reduce((acc, el, index) => {
         return acc + `
            <div class="cuisines-item">
-          <div class="cuisines__image" style="background-image: url(/assets/img/cuisines/${el.recipes}.png)"></div>
+          <div class="cuisines__image" style="background-image: url(assets/img/cuisines/${el.recipes}.png)"></div>
           <div class="cuisines__title">
             <p>${el.recipesAmount} Recipes</p>
             <h2><a href="#">${el.recipes}</a></h2>

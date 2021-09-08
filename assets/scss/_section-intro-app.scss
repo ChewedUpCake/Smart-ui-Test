@@ -10,10 +10,14 @@
       justify-content: space-around;
     }
     @include sm-min {
-      flex-flow: column-reverse;
-      justify-content: center;
       padding: 35px;
     }
+    @include xs-min {
+      flex-flow: column-reverse;
+      justify-content: center;
+      padding: 10px 0 0 0;
+    }
+
   }
 
 
@@ -32,8 +36,8 @@
     @include md-sm {
       margin: 0 auto;
     }
-    @include sm {
-
+    @include xs-min {
+      margin: 0 auto;
     }
     img {
       @include xl-lg {
@@ -43,6 +47,10 @@
         max-height: 500px;
       }
       @include md-sm {
+        max-height: 400px;
+      }
+
+      @include sm-xs {
         max-height: 400px;
       }
     }
@@ -59,7 +67,7 @@
     @include lg-md {
       margin-top: 50px;
     }
-    @include md-sm {
+    @include md-xs {
       display: flex;
       flex-flow: column;
       justify-content: center;
@@ -67,7 +75,7 @@
 
 
     &__links {
-      @include md-sm {
+      @include md-xs {
         margin: 0 auto;
       }
     }
@@ -90,6 +98,9 @@
         @include md-sm {
           left: 41%;
         }
+        @include sm-xs {
+          left: 36%;
+        }
 
       }
 
@@ -97,6 +108,11 @@
         text-align: left;
       }
       @include sm-min {
+        text-align: center;
+        font-size: 1.1em;
+        margin-bottom: 40px;
+      }
+      @include xs-min {
         text-align: center;
         font-size: 1.1em;
         margin-bottom: 40px;
@@ -117,6 +133,11 @@
         font-size: 0.8rem;
       }
       @include md-sm {
+        font-size: 0.8rem;
+        margin: 10px auto;
+        text-align: center;
+      }
+      @include sm-xs {
         font-size: 0.8rem;
         margin: 10px auto;
         text-align: center;

@@ -627,8 +627,6 @@ a {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   cursor: pointer;
-  height: 10px;
-  width: 10px;
   margin-right: 3px;
   margin-left: 3px;
   background-color: white;
@@ -646,10 +644,6 @@ a {
 
 .carousel .dot:hover {
   background-color: #751045;
-}
-
-.cuisines {
-  padding: 100px 0 50px 0;
 }
 
 .cuisines h3 {
@@ -849,26 +843,12 @@ a {
   color: #000;
 }
 
-@media (min-width: 576px) {
-  .btn {
-    height: 30px;
-  }
-  .btn--primary {
-    min-width: 350px;
-  }
+@media (min-width: 360px) {
   .header-content__logo {
     margin: 0 auto 131px auto;
   }
   .header-content__logo img {
     height: 183%;
-  }
-  .header-content h1:before {
-    bottom: 43%;
-    right: 37%;
-  }
-  .header-content a {
-    font-size: 0.8em;
-    padding: 10px 40px 25px 40px;
   }
   .feature-item__description p {
     font-size: 0.9rem;
@@ -882,6 +862,33 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 10px 0 0 0;
+  }
+  .intro-app__picture {
+    margin: 0 auto;
+  }
+  .intro-app__description h2 {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+  }
+  .statistic .statistics-container__item .number {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .btn {
+    height: 30px;
+  }
+  .btn--primary {
+    min-width: 350px;
+  }
+  .feature-item__description p {
+    font-size: 0.9rem;
+    margin: 20px auto;
+  }
+  .intro-app__container {
     padding: 35px;
   }
   .intro-app__description h2 {
@@ -889,8 +896,12 @@ a {
     font-size: 1.1em;
     margin-bottom: 40px;
   }
-  .cuisines h3:after {
-    left: 42%;
+  .carousel .dot {
+    height: 10px;
+    width: 10px;
+  }
+  .cuisines {
+    padding: 100px 0 50px 0;
   }
   .statistic .statistics-container__item .number {
     font-size: 3.2rem;
@@ -973,6 +984,9 @@ a {
 }
 
 @media (min-width: 1200px) {
+  .form {
+    left: 30%;
+  }
   .header-content h1:before {
     top: 13%;
     right: 40%;
@@ -1016,6 +1030,9 @@ a {
 }
 
 @media (max-width: 1199.8px) and (min-width: 992px) {
+  .form {
+    left: 20%;
+  }
   .header-content h1:before {
     top: 13%;
     right: 33%;
@@ -1063,6 +1080,9 @@ a {
   }
   .btn {
     height: 30px;
+  }
+  .form {
+    left: 12%;
   }
   .header-content h1:before {
     top: 8%;
@@ -1135,11 +1155,7 @@ a {
   }
 }
 
-@media (max-width: 767.8px) and (min-width: 576px) {
-  h2 {
-    margin-bottom: 36px;
-    font-size: 1.5rem;
-  }
+@media (max-width: 767.8px) and (min-width: 360px) {
   .header-menu {
     display: none;
   }
@@ -1156,21 +1172,21 @@ a {
             flex-flow: column;
     justify-items: center;
   }
+  .header-content h1:before {
+    bottom: 43%;
+    right: 37%;
+  }
+  .header-content h1:before {
+    bottom: 43%;
+    right: 20%;
+  }
   .features {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding-bottom: 20px;
-  }
-  .feature-item__description h3:after {
-    right: 42.5%;
-  }
-  .intro-app__picture {
-    margin: 0 auto;
-  }
-  .intro-app__picture img {
-    max-height: 400px;
+    margin: 50px auto;
   }
   .intro-app__description {
     display: -webkit-box;
@@ -1186,6 +1202,46 @@ a {
   }
   .intro-app__description__links {
     margin: 0 auto;
+  }
+  .cuisines__container {
+    grid-template-areas: 'a1' 'a2' 'a3' 'a4' 'a5' 'a6' 'a7' 'a8' 'a9' 'a10';
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 300px;
+  }
+  .statistic .statistics-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 767.8px) and (min-width: 576px) {
+  h2 {
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+  }
+  .form {
+    left: 9%;
+  }
+  .header-content a {
+    font-size: 0.8em;
+    padding: 10px 40px 25px 40px;
+  }
+  .header-content p {
+    font-size: 0.7em;
+  }
+  .feature-item__description h3:after {
+    right: 42.5%;
+  }
+  .intro-app__picture {
+    margin: 0 auto;
+  }
+  .intro-app__picture img {
+    max-height: 400px;
   }
   .intro-app__description h2:after {
     left: 41%;
@@ -1206,22 +1262,11 @@ a {
   .carousel .carousel-item__txt .comment {
     font-size: 1.2rem;
   }
-  .cuisines__container {
-    grid-template-areas: 'a1' 'a2' 'a3' 'a4' 'a5' 'a6' 'a7' 'a8' 'a9' 'a10';
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 300px;
+  .cuisines h3:after {
+    left: 42%;
   }
   .cuisines-item .cuisines__title h2 {
     font-size: 2.6rem;
-  }
-  .statistic .statistics-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .footer .footer-container .copyright p {
     font-size: 0.8em;
@@ -1242,5 +1287,73 @@ a {
   }
   .btn--primary {
     width: 100%;
+  }
+}
+
+@media (max-width: 575.8px) and (min-width: 360px) {
+  .header-content a {
+    font-size: 0.8em;
+    padding: 15px 20px 15px 20px;
+  }
+  .header-content p {
+    font-size: 0.6em;
+  }
+  .feature-item__description h3:after {
+    right: 35.5%;
+  }
+  .intro-app__picture img {
+    max-height: 400px;
+  }
+  .intro-app__description h2:after {
+    left: 36%;
+  }
+  .intro-app__description p {
+    font-size: 0.8rem;
+    margin: 10px auto;
+    text-align: center;
+  }
+  .carousel .carousel-item {
+    width: 100%;
+    height: 166px;
+    padding: 17px 0;
+  }
+  .carousel .carousel-item__txt .comment {
+    font-size: 0.6rem;
+  }
+  .carousel .carousel-item__txt .bio {
+    font-size: 0.3rem;
+  }
+  .carousel .carousel-item .rounded-circle {
+    height: 50px;
+    width: 50px;
+  }
+  .carousel .dot {
+    height: 5px;
+    width: 5px;
+  }
+  .cuisines {
+    padding: 10px 0 10px 0;
+  }
+  .cuisines h3:after {
+    left: 36%;
+  }
+  .cuisines-item .cuisines__title h2 {
+    font-size: 1.6rem;
+  }
+  .footer .footer-container .copyright p {
+    font-size: 0.6em;
+  }
+  .footer .footer-container .design {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    margin-top: 20px;
+  }
+  .footer .footer-container .design p {
+    font-size: 0.6em;
+  }
+  .footer .footer-container .design a {
+    font-size: 0.6em;
   }
 }

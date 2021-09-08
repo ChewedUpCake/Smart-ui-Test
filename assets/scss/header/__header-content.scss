@@ -3,23 +3,11 @@
   display: flex;
   justify-content: center;
 
-  @include xl-min {
-  }
-  @include xl-lg {
-  }
-  @include lg-sm {
-
-  }
-  @include md-sm {
-  }
-  @include sm {
-
-  }
   &__logo {
     @include md-min {
       display: none;
     }
-    @include sm-min {
+    @include xs-min {
       margin: 0 auto 131px auto;
 
       img {
@@ -28,7 +16,7 @@
     }
   }
   &__title {
-    @include md-sm {
+    @include md-xs {
       margin: 20px auto;
     }
   }
@@ -39,7 +27,7 @@
         justify-items: center;
         text-align: center;
     }
-    @include md-sm {
+    @include md-xs {
       display: flex;
       flex-flow: column;
       justify-items: center;
@@ -68,9 +56,13 @@
       top: 8%;
       right: 36%;
     }
-    @include sm-min {
+    @include md-xs {
       bottom: 43%;
       right: 37%;
+    }
+    @include md-xs {
+      bottom: 43%;
+      right: 20%;
     }
 
   }
@@ -89,9 +81,13 @@
       font-size: 1.1em;
       padding: 14px 40px 35px 40px;
     }
-    @include sm-min {
+    @include md-sm {
       font-size: 0.8em;
       padding: 10px 40px 25px 40px;
+    }
+    @include sm-xs {
+      font-size: 0.8em;
+      padding: 15px 20px 15px 20px;
     }
   }
   p {
@@ -100,6 +96,12 @@
 
     @include lg-md {
       font-size: 0.8em;
+    }
+    @include md-sm {
+      font-size: 0.7em;
+    }
+    @include sm-xs {
+      font-size: 0.6em;
     }
   }
   .add-recipe-link {

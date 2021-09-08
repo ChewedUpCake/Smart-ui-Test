@@ -41,6 +41,9 @@
       @include md-sm {
         font-size: 2.6rem;
       }
+      @include sm-xs {
+        font-size: 1.6rem;
+      }
     }
     p {
       color: white;

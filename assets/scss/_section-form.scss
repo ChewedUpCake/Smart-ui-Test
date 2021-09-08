@@ -8,6 +8,19 @@
   border-radius: 5px;
   z-index: 2;
 
+  @include xl-min {
+    left: 30%;
+  }
+  @include xl-lg {
+    left: 20%;
+  }
+  @include lg-md {
+    left: 12%;
+  }
+  @include md-sm {
+    left: 9%;
+  }
+
   .form-container {
     display: flex;
     flex-flow: column;

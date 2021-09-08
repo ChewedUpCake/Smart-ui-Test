@@ -19,6 +19,9 @@
         @include md-sm {
           font-size: 0.8em;
         }
+        @include sm-xs {
+          font-size: 0.6em;
+        }
       }
     }
 
@@ -26,10 +29,18 @@
       display: flex;
       align-items: center;
 
+      @include sm-xs {
+        flex-flow: column;
+        margin-top: 20px;
+      }
+
       p {
         color: $color-footer-txt;
         @include md-sm {
           font-size: 0.8em;
+        }
+        @include sm-xs {
+          font-size: 0.6em;
         }
       }
 
@@ -37,6 +48,9 @@
         color: $color-primary;
         @include md-sm {
           font-size: 0.8em;
+        }
+        @include sm-xs {
+          font-size: 0.6em;
         }
       }
     }

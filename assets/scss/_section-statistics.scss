@@ -8,7 +8,7 @@
       flex-flow: row;
       justify-content: space-around;
     }
-    @include md-sm {
+    @include md-xs {
       flex-flow: column;
       justify-content: center;
     }
@@ -34,6 +34,9 @@
         }
         @include sm-min {
           font-size: 3.2rem;
+        }
+        @include xs-min {
+          font-size: 2.2rem;
         }
       }
     }

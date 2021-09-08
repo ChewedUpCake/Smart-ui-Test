@@ -9,9 +9,10 @@
     flex-direction: column;
     padding-bottom: 20px;
   }
-  @include md-sm {
+  @include md-xs {
     flex-direction: column;
     padding-bottom: 20px;
+    margin: 50px auto;
   }
 }
 
@@ -45,6 +46,10 @@
         @include md-sm {
           right: 42.5%;
         }
+        @include sm-xs {
+          right: 35.5%;
+        }
+
       }
     }
     p {
@@ -54,6 +59,10 @@
         font-size: 1rem;
       }
       @include sm-min {
+        font-size: 0.9rem;
+        margin: 20px auto;
+      }
+      @include xs-min {
         font-size: 0.9rem;
         margin: 20px auto;
       }
